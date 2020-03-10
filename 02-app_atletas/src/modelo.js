@@ -33,9 +33,11 @@ class Equipe {
     return this.__atletas
   }
 
-  encontreAtletasComAlturmaMinima (alturaMinima) {
-    // FIXME bug!
-    return this.__atletas
+  encontreAtletasComAlturaMinima(alturaMinima) {
+    let comAlturaMinima = atleta => atleta.altura >= alturaMinima
+    let atletasComAlturaMinima = this.atletas.filter(comAlturaMinima)
+
+    return atletasComAlturaMinima
   }
 }
 

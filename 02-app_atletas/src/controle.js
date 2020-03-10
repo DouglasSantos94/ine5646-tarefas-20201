@@ -17,7 +17,7 @@ function consultaInicial (res, dados) {
  */
 function consultaPesquisaPorAltura (req, res, dados) {
   const alturaMinima = parseInt(req.query.altura_minima)
-  const atletas = dados.equipe.encontreAtletasComAlturmaMinima(alturaMinima)
+  const atletas = dados.equipe.encontreAtletasComAlturaMinima(alturaMinima)
   const resposta = {
     nome: dados.equipe.nome,
     titulo: dados.titulo,
