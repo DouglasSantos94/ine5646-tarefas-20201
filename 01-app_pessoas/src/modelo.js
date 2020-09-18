@@ -25,8 +25,14 @@ class Pessoa {
  * @returns [Pessoa]
  */
 function selecionaPessoas (pessoas, idadeLimite) {
-  let acimaDaIdadeLimite = pessoa => pessoa.idade > idadeLimite
-  let pessoasAcimaDaIdadeLimite = pessoas.filter(acimaDaIdadeLimite)
+  // let acimaDaIdadeLimite = pessoa => pessoa.idade > idadeLimite
+  // let pessoasAcimaDaIdadeLimite = pessoas.filter(acimaDaIdadeLimite)
+  let pessoasAcimaDaIdadeLimite = []
+  for (let pessoa of pessoas) {
+    if(pessoa.idade > idadeLimite) {
+      pessoasAcimaDaIdadeLimite.push(pessoa)
+    }
+  }
   return pessoasAcimaDaIdadeLimite
 }
 

@@ -17,11 +17,13 @@ function useModelo() {
   const [estado, setEstado] = useState(estadoInicial)
 
   function naoPodePesquisar () {
+    //essa função será invocada sempre que o input mudar, para verificar se o conteúdo do input é válido. enquanto não for válido, essa função retornará true, e o atributo disabled do elemento button será true
     return estado.pesquisando === true || estado.data === undefined 
       || estado.nasaApiKey === undefined || estado.relatorio !== undefined
   }
 
   function onDataInvalida () {
+    // quando esse método for chamado pelo componente DataNASA, setará o estado atual da aplicação para o estado inicial, com tudo undefined ou false. 
     setEstado({...estadoInicial, nasaApiKey: estado.nasaApiKey})
   }
 
